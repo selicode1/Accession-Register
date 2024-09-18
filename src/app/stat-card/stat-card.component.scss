@@ -1,0 +1,91 @@
+/* Card styling */
+.cards {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .card {
+    width: 100%;
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    .card-content {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  
+  /* Icon container */
+  .icon-container {
+    border-radius: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Heart icon */
+  .icon {
+    width: 40px;
+    height: auto;
+  }
+  
+  /* Text content */
+  .text-content {
+    margin-left: 15px;
+  }
+  
+  /* Number styling */
+  .number {
+    margin: 0;
+    font-size: 36px;
+    color: #4a4a4a;  /* Dark grey */
+    font-weight: 600;
+  }
+  
+  /* Label styling */
+  .label {
+    margin: 0;
+    color: #7a7a7a;  /* Light grey */
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  /* Card styling */
+  .chart-card {
+      width: 300px;
+      background-color: white;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+  }
+  
+  /* Header styling */
+  .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+  }
+  
+  .card-header h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #4a4a4a;
+      margin: 0;
+  }
+  
+  .more-options {
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #7a7a7a;
+  }

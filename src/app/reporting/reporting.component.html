@@ -1,0 +1,109 @@
+<main>
+    <app-sidebar></app-sidebar>
+    <div class="reporting-container">
+        <h1>Reporting</h1>
+        <app-stat-card></app-stat-card>
+
+
+        <div class="records-table-container">
+            <div class="header">
+              <div class="filtering">
+                <input type="search" placeholder="Search by ISBN, Title" id="search"/>
+                <button id="filter">Filter</button>
+              </div>
+              <a href="#" class="view-all">Print Filtered Record</a>
+            </div>
+            <table class="records-table">
+              <thead>
+                <tr>
+                  <th><input type="checkbox" /></th>
+                  <th>ISBN</th>
+                  <th>Title</th>
+                  <th>Class Number</th>
+                  <th>Copies</th>
+                  <th>Range</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>876364</td>
+                  <td>Arorra gaur</td>
+                  <td>570/IZE</td>
+                  <td>12</td>
+                  <td>09 - 283638</td>
+                  <td>
+                    <div class="action-menu">
+                      <button class="menu-btn">•••</button>
+                      <div class="menu-dropdown">
+                        <a href="#">Edit</a>
+                        <a href="#" class="delete">Delete</a>
+                        <a href="#">Regenerate Barcode</a>
+                        <a href="#">Print</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>876123</td>
+                  <td>James Mullican</td>
+                  <td>428/HAR</td>
+                  <td>10</td>
+                  <td>09 - 283638</td>
+                  <td>
+                    <div class="action-menu">
+                      <button class="menu-btn">•••</button>
+                      <div class="menu-dropdown">
+                        <a href="#">Edit</a>
+                        <a href="#" class="delete">Delete</a>
+                        <a href="#">Regenerate Barcode</a>
+                        <a href="#">Print</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="highlight">
+                  <td><input type="checkbox" /></td>
+                  <td>876213</td>
+                  <td>Robert Bacins</td>
+                  <td>428/HAR</td>
+                  <td>09</td>
+                  <td>09 - 283638</td>
+                  <td>
+                    <div class="action-menu">
+                      <button class="menu-btn">•••</button>
+                      <div class="menu-dropdown">
+                        <a href="#">Edit</a>
+                        <a href="#" class="delete">Delete</a>
+                        <a href="#">Regenerate Barcode</a>
+                        <a href="#">Print</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="highlight">
+                    <td><input type="checkbox" /></td>
+                    <td>876213</td>
+                    <td>Robert Bacins</td>
+                    <td>428/HAR</td>
+                    <td>09</td>
+                    <td>09 - 283638</td>
+                    <td>
+                      <div class="action-menu">
+                        <button class="menu-btn">•••</button>
+                        <div class="menu-dropdown">
+                          <a href="#">Edit</a>
+                          <a href="#" class="delete">Delete</a>
+                          <a href="#">Regenerate Barcode</a>
+                          <a href="#">Print</a>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+    </div>
+</main>
