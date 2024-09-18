@@ -2,19 +2,124 @@ main {
     display: flex;
 }
 
+.head {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="date"] {
+    padding: 15px;
+    margin-block: 25px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    box-sizing: border-box;
+    background-color: #f7f7f8;
+    border-width: 0;
+  }
+
 .reporting-container {
     padding: 15px;
     padding-inline: 2rem;
     background-color: #fafafb;
     h1 {
-      padding: 10px;
+      margin-block: 25px;
     }
     width: 100%;
 }
 
+/* Card styling */
+.cards {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .card {
+    width: 100%;
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+
+  
+    .card-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+  }
+
+  .card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-btn {
+    width: 100%;
+    background-color: white;
+    border-radius: 15px;
+    // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-btn:hover{
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  #record {
+    background-color: #033600;
+    font-size: 15px;
+    color: #fff;
+    padding: 10px 80px;
+    border-radius: 10px;
+    border-width: 0;
+    cursor: pointer;
+  }
+  
+  /* Icon container */
+  .icon-container {
+    border-radius: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Heart icon */
+  .icon {
+    width: 40px;
+    height: auto;
+  }
+  
+  /* Text content */
+  .text-content {
+    margin-left: 15px;
+  }
+  
+  /* Number styling */
+  .number {
+    margin: 0;
+    font-size: 35px;
+    color: #4a4a4a;  /* Dark grey */
+    font-weight: 500;
+  }
+  
+  /* Label styling */
+  .label {
+    margin: 0;
+    color: #7a7a7a;  /* Light grey */
+    font-size: 15px;
+    font-weight: 500;
+  }
+
 .records-table-container {
     width: 100%;
     margin-bottom: 5%;
+    // overflow-x: auto;
   }
   
   .header {
@@ -32,13 +137,13 @@ main {
   .header .view-all {
     color: red;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
   }
 
 .records-table {
     width: 100%;
     border-collapse: collapse;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    // box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
   
   .records-table th,
@@ -92,14 +197,14 @@ main {
     background-color: #fff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     z-index: 1;
+    padding: 15px 10px;
     border-radius: 4px;
     overflow: hidden;
   }
   
   .menu-dropdown a {
     display: block;
-    padding: 8px 16px;
-    color: #333;
+    padding: 8px 5rem 8px 10px;
     text-decoration: none;
     font-size: 14px;
   }
@@ -110,6 +215,29 @@ main {
   
   .menu-dropdown .delete {
     color: red;
+    background-color: #fef3f5;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  .menu-dropdown .barcode {
+    color: #033600;
+    background-color: #0336002a;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .menu-dropdown .print {
+    color: #000000;
+    background-color: #0000003a;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .menu-dropdown .edit {
+    color: #5B93FF;
+    background-color: #f7f9ff;
+    border-radius: 5px;
+    margin-top: 10px;
   }
   
   .action-menu:hover .menu-dropdown {
@@ -124,10 +252,64 @@ main {
     border-radius: 10px;
     margin-left: 20px;
     border-width: 0;
+    cursor: pointer;
   }
 
   #search {
     padding: 10px 30px;
     border-radius: 10px;
     border-width: 0;
+  }
+  
+
+  @media screen and (max-width: 768px) {
+    .cards {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .records-table thead {
+        display: none;
+      }
+    
+    
+      .records-table td {
+        display: block;
+        width: 100%;
+      }
+    
+      .records-table tr {
+        margin-bottom: 1rem;
+        border-bottom: 1px solid black;
+    
+      }
+    
+      .records-table tbody tr td {
+        text-align: right;
+        position: relative;
+      }
+    
+      .records-table td::before{
+        content: attr(data-cell);
+        font-weight: bold;
+        color: #6c6c6c;
+        position: absolute;
+        left: 0;
+      }
+
+    .header{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .filtering {
+        display: flex;
+        margin-block: 1rem;
+    }
+
+
+
   }

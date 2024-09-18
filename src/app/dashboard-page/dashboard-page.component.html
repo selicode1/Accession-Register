@@ -1,6 +1,6 @@
 <!-- dashboard.component.html -->
 <div class="dashboard-container">
-  <app-sidebar></app-sidebar>
+  <!-- <app-sidebar></app-sidebar> -->
   <main>
     <h1>Dashboard</h1>
     <app-stat-card></app-stat-card>
@@ -13,11 +13,11 @@
     
 
 
+    <div class="header">
+      <h2>Records Table</h2>
+      <a href="#" class="view-all">View all</a>
+    </div>
     <div class="records-table-container">
-      <div class="header">
-        <h2>Records Table</h2>
-        <a href="#" class="view-all">View all</a>
-      </div>
       <table class="records-table">
         <thead>
           <tr>
@@ -32,58 +32,58 @@
         </thead>
         <tbody>
           <tr>
-            <td><input type="checkbox" /></td>
-            <td>876364</td>
-            <td>Arorra gaur</td>
-            <td>570/IZE</td>
-            <td>12</td>
-            <td>09 - 283638</td>
-            <td>
+            <td data-cell="Select"><input type="checkbox" /></td>
+            <td data-cell="ISBN">876364</td>
+            <td data-cell="Title">Arorra gaur</td>
+            <td data-cell="Class Number">570/IZE</td>
+            <td data-cell="Copies">12</td>
+            <td data-cell="Range">09 - 283638</td>
+            <td data-cell="Action">
               <div class="action-menu">
                 <button class="menu-btn">•••</button>
                 <div class="menu-dropdown">
-                  <a href="#">Edit</a>
+                  <a href="#" class="edit">Edit</a>
                   <a href="#" class="delete">Delete</a>
-                  <a href="#">Regenerate Barcode</a>
-                  <a href="#">Print</a>
+                  <a href="#" class="barcode">Regenerate Barcode</a>
+                  <a href="#" class="print">Print</a>
                 </div>
               </div>
             </td>
           </tr>
           <tr>
-            <td><input type="checkbox" /></td>
-            <td>876123</td>
-            <td>James Mullican</td>
-            <td>428/HAR</td>
-            <td>10</td>
-            <td>09 - 283638</td>
-            <td>
+            <td data-cell="Select"><input type="checkbox" /></td>
+            <td data-cell="ISBN">876364</td>
+            <td data-cell="Title">Arorra gaur</td>
+            <td data-cell="Class Number">570/IZE</td>
+            <td data-cell="Copies">12</td>
+            <td data-cell="Range">09 - 283638</td>
+            <td data-cell="Action">
               <div class="action-menu">
                 <button class="menu-btn">•••</button>
                 <div class="menu-dropdown">
-                  <a href="#">Edit</a>
+                  <a href="#" class="edit">Edit</a>
                   <a href="#" class="delete">Delete</a>
-                  <a href="#">Regenerate Barcode</a>
-                  <a href="#">Print</a>
+                  <a href="#" class="barcode">Regenerate Barcode</a>
+                  <a href="#" class="print">Print</a>
                 </div>
               </div>
             </td>
           </tr>
-          <tr class="highlight">
-            <td><input type="checkbox" /></td>
-            <td>876213</td>
-            <td>Robert Bacins</td>
-            <td>428/HAR</td>
-            <td>09</td>
-            <td>09 - 283638</td>
-            <td>
+          <tr>
+            <td data-cell="Select"><input type="checkbox" /></td>
+            <td data-cell="ISBN">876364</td>
+            <td data-cell="Title">Arorra gaur</td>
+            <td data-cell="Class Number">570/IZE</td>
+            <td data-cell="Copies">12</td>
+            <td data-cell="Range">09 - 283638</td>
+            <td data-cell="Action">
               <div class="action-menu">
                 <button class="menu-btn">•••</button>
                 <div class="menu-dropdown">
-                  <a href="#">Edit</a>
+                  <a href="#" class="edit">Edit</a>
                   <a href="#" class="delete">Delete</a>
-                  <a href="#">Regenerate Barcode</a>
-                  <a href="#">Print</a>
+                  <a href="#" class="barcode">Regenerate Barcode</a>
+                  <a href="#" class="print">Print</a>
                 </div>
               </div>
             </td>

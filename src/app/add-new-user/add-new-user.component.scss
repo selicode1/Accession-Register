@@ -1,0 +1,110 @@
+.container {
+    position: fixed;       /* Makes the sidebar static (fixed to the viewport) */
+    top: 0;                /* Stick to the top of the page */
+    right: -20vw; /* Initially hidden off-screen */
+    width: 20vw;
+    height: 100vh;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-block: 25px;
+    transition: right 0.3s ease; /* Animation */
+    background-color: #fff;
+  }
+
+  .container.show {
+    right: 0; /* Slide in */
+  }
+  
+  .profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 20px;
+  }
+
+  h2 {
+    padding-left: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .profile-image i {
+    font-size: 40px;
+    color: #ccc;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #f7f7f8;
+    border-width: 0;
+  }
+  
+  button {
+    background-color: #033600;
+    color: #fff;
+    padding: 15px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  
+  button:hover {
+    background-color: #0336009c;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #ee5d6f;
+    background-color: #fef3f5;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  form {
+    padding-inline: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  /* Label styling */
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+  }
+
+  @media screen and (max-width: 768px) {
+    .container {
+        width: 100vw; /* Full screen width on smaller devices */
+        right: -100vw; /* Initially hidden completely off-screen */
+    }
+    .container.show {
+        right: 0; /* Fully visible when the button is clicked */
+    }
+}

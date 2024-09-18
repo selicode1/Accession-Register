@@ -1,0 +1,103 @@
+/* General styles */  
+  .profile-card {
+    position: sticky;       /* Makes the sidebar static (fixed to the viewport) */
+    top: 0;                /* Stick to the top of the page */
+    margin-left: auto; /* Ensures the sidebar stays on the right */
+    width: 20vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    z-index: 1000;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    // padding: 20px;       /* Ensures the sidebar stays on top of other elements */
+  }
+  
+  /* User information styles */
+  .user-info {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .user-info h2 {
+    font-size: 20px;
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .user-info p {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  /* Contact information styles */
+  .contact-info {
+    text-align: left;
+    margin-inline: 30px;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 25px;
+    margin-top: 10px;
+  }
+  
+  .contact-info h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-info p {
+    font-size: 14px;
+    margin: 25px 0;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .contact-info img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  /* Records section */
+  .records {
+    margin-top: 10px;
+  }
+  
+  .records h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .bar-chart {
+    margin: 0 auto;
+  }
+  
+  /* Donut charts section */
+  .donut-charts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .donut-chart {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  
+  .donut-chart p {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  

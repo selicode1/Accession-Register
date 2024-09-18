@@ -1,15 +1,15 @@
 .dashboard-container {
   display: flex;
+  width: 100%;
 }
 
 main {
-  padding: 15px;
+  width: 100%;
   padding-inline: 2rem;
   background-color: #fafafb;
   h1 {
     padding: 10px;
   }
-  width: 100%;
 }
 
 
@@ -22,6 +22,7 @@ main {
 app-line-chart {
   width: 70%;
 }
+
 
 app-donut-chart{
   width: 30%;
@@ -37,7 +38,7 @@ app-donut-chart{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  margin-block: 10px;
 }
 
 .header h2 {
@@ -47,14 +48,18 @@ app-donut-chart{
 .header .view-all {
   color: red;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .records-table {
   width: 100%;
   border-collapse: collapse;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  // box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+
+// .records-table:hover{
+//   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+// }
 
 .records-table th,
 .records-table td {
@@ -95,8 +100,10 @@ app-donut-chart{
 .menu-btn {
   background: none;
   border: none;
+  color: #8c8c8c;
   font-size: 20px;
   cursor: pointer;
+  text-align: right;
 }
 
 .menu-dropdown {
@@ -107,26 +114,102 @@ app-donut-chart{
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   z-index: 1;
+  padding: 15px 10px;
   border-radius: 4px;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .menu-dropdown a {
   display: block;
-  padding: 8px 16px;
-  color: #333;
+  padding: 8px 5rem 8px 10px;
   text-decoration: none;
   font-size: 14px;
 }
 
 .menu-dropdown a:hover {
-  background-color: #f5f5f5;
+  background-color: #ffffff;
 }
 
 .menu-dropdown .delete {
   color: red;
+  background-color: #fef3f5;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.menu-dropdown .barcode {
+  color: #033600;
+  background-color: #0336002a;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.menu-dropdown .print {
+  color: #000000;
+  background-color: #0000003a;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.menu-dropdown .edit {
+  color: #5B93FF;
+  background-color: #f7f9ff;
+  border-radius: 5px;
+  margin-top: 10px;
 }
 
 .action-menu:hover .menu-dropdown {
   display: block;
+}
+
+@media screen and (max-width: 768px) {
+  main{
+    width: 100%;
+  }
+  
+  .analytics {
+    flex-direction: column; /* Stacks items on smaller screens */
+    gap: 1rem; /* Adjust the gap for a more compact layout */
+    width: 100%;
+  }
+  
+  app-line-chart {
+    width: 100%;
+    height: auto;
+  }
+  
+  
+  app-donut-chart{
+    width: 100%;
+    height: auto;
+  }
+
+  .records-table thead {
+    display: none;
+  }
+
+
+  .records-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .records-table tr {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid black;
+
+  }
+
+  .records-table tbody tr td {
+    text-align: right;
+    position: relative;
+  }
+
+  .records-table td::before{
+    content: attr(data-cell);
+    font-weight: bold;
+    color: #6c6c6c;
+    position: absolute;
+    left: 0;
+  }
+  
 }

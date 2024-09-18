@@ -20,6 +20,10 @@
     width: 50px;
     height: auto;
   }
+
+  form{
+    margin-top: 30px;
+  }
   
   /* Heading */
   h2 {
@@ -48,7 +52,6 @@
   /* Label styling */
   label {
     display: block;
-    margin-bottom: 5px;
     font-size: 14px;
     color: #333;
     font-weight: 500;
@@ -70,6 +73,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    gap: 5px;
   }
 
 //   .checkbox-group input[type="checkbox"] {
@@ -98,7 +102,7 @@
   
   /* Terms text styling */
   .terms {
-    font-size: 12px;
+    font-size: 13px;
     margin-top: 20px;
     color: #666;
   }
@@ -126,3 +130,7 @@
     color: #555; /* Text color */
   }
   
+
+  @media screen and (max-width: 768px) {
+    
+  }

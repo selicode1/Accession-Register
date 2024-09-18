@@ -20,6 +20,8 @@ export class LineChartComponent implements AfterViewInit  {
     // Initialize the chart after the view is initialized
     this.createLineChart();
   }
+  
+  
 
   createLineChart() {
     const canvas = document.getElementById('yearlyRecordsChart') as HTMLCanvasElement;
@@ -78,8 +80,6 @@ export class LineChartComponent implements AfterViewInit  {
                 labels: {
                   font: {
                     size: 14,
-                    family: 'Arial',
-                    weight: 'bold',
                   },
                   color: '#666',
                 },

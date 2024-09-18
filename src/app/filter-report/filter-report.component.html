@@ -1,0 +1,45 @@
+<div class="container" [class.show]="isVisible">
+    <h3>Filter Report</h3>
+    <span (click)="closeSidebar()" class="close-btn">&times;</span>
+
+    <form>
+        <div class="form-group-check">
+            <input type="checkbox" id="fiction"/>
+            <label for="fiction">Fiction</label>
+        </div>
+    
+        <div class="form-group-check">
+            <input type="checkbox" id="non-fiction"/>
+            <label for="non-fiction">Non-Fiction</label>
+        </div>
+    
+        <div class="form-group-check">
+            <input type="checkbox" id="class-number"/>
+            <label for="class-number">Class Number</label>
+        </div>
+    
+        <div class="form-group-check">
+            <input type="checkbox" id="date-range"/>
+            <label for="date-range">Date / Date Range</label>
+        </div>
+
+        <div class="form-group">
+            <label for="class-no">Class Number</label>
+            <input type="number" id="class-no" placeholder="12">
+        </div>
+
+        <div class="dates">
+            <div class="form-group">
+                <label for="start">Start Date</label>
+                <input type="date" id="start-date">
+            </div>
+            <div class="form-group">
+                <label for="end-date">End Date</label>
+                <input type="date" id="end-date" required>
+            </div>
+        </div>
+        <button>Filter</button>
+    </form>
+  
+    
+  </div>
