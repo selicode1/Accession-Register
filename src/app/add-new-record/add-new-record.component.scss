@@ -1,8 +1,8 @@
 .container {
     position: fixed;       /* Makes the sidebar static (fixed to the viewport) */
     top: 0;                /* Stick to the top of the page */
-    right: -20vw; /* Initially hidden off-screen */
-    width: 20vw;
+    right: -25vw; /* Initially hidden off-screen */
+    width: 25vw;
     height: 100vh;
     z-index: 999;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

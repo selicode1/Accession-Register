@@ -1,8 +1,14 @@
 <main>
-    <!-- <app-sidebar></app-sidebar> -->
+  <app-sidebar [isVisible]="visibleSidebar === 'Sidebar'"  (close)="hideSidebar()" [title]="'Sidebar'"></app-sidebar>
+  <div class="backdrop" [class.active]="visibleSidebar === 'Sidebar'"></div>
     <div class="reporting-container">
         <div class="head">
+          <div class="heading">
+            <div class="menu-icon" (click)="toggleSidebar('Sidebar')">
+              <img src="icon/menu.png" alt="Menu Icon"  id="menu-icon">
+            </div>
             <h1>Reporting</h1>
+          </div>
             <input type="date" id="start-date">
         </div>
         
@@ -57,9 +63,14 @@
         <div class="header">
             <div class="filtering">
               <input type="search" placeholder="Search by ISBN, Title" id="search"/>
-              <button (click)="toggleSidebar('filterReport')" id="filter">Filter</button>
+              <button (click)="toggleSidebar('filterReport')" id="filter">
+                Filter
+              </button>
             </div>
-            <a href="#" class="view-all">Print Filtered Record</a>
+            <a href="#" class="print-record">
+              <img src="icon/printer.png" class="print-icon"/>
+              <span class="view-all">Print Filtered Record</span>
+            </a>
         </div>
 
 
@@ -88,10 +99,22 @@
                     <div class="action-menu">
                       <button class="menu-btn">•••</button>
                       <div class="menu-dropdown">
-                        <a href="#" class="edit">Edit</a>
-                        <a href="#" class="delete">Delete</a>
-                        <a href="#" class="barcode">Regenerate Barcode</a>
-                        <a href="#" class="print">Print</a>
+                        <a href="#" class="act-btn">
+                          <img src="icon/Edit.png" class="act-icon"/>
+                          <span class="edit">Edit</span>
+                        </a>
+                        <a href="#" class="act-btn">
+                          <img src="icon/Delete.png" class="act-icon"/>
+                          <span href="#" class="delete">Delete</span>
+                        </a>
+                        <a class="act-btn">
+                          <img src="icon/barcode.png" class="act-icon"/>
+                          <span href="#" class="barcode">Regenerate Barcode</span>
+                        </a>
+                        <a class="act-btn">
+                          <img src="icon/print.png" class="act-icon"/>
+                          <span href="#" class="print">Print</span>
+                        </a>
                       </div>
                     </div>
                   </td>
@@ -107,10 +130,22 @@
                     <div class="action-menu">
                       <button class="menu-btn">•••</button>
                       <div class="menu-dropdown">
-                        <a href="#" class="edit">Edit</a>
-                        <a href="#" class="delete">Delete</a>
-                        <a href="#" class="barcode">Regenerate Barcode</a>
-                        <a href="#" class="print">Print</a>
+                        <a href="#" class="act-btn">
+                          <img src="icon/Edit.png" class="act-icon"/>
+                          <span class="edit">Edit</span>
+                        </a>
+                        <a href="#" class="act-btn">
+                          <img src="icon/Delete.png" class="act-icon"/>
+                          <span href="#" class="delete">Delete</span>
+                        </a>
+                        <a class="act-btn">
+                          <img src="icon/barcode.png" class="act-icon"/>
+                          <span href="#" class="barcode">Regenerate Barcode</span>
+                        </a>
+                        <a class="act-btn">
+                          <img src="icon/print.png" class="act-icon"/>
+                          <span href="#" class="print">Print</span>
+                        </a>
                       </div>
                     </div>
                   </td>
@@ -126,10 +161,22 @@
                     <div class="action-menu">
                       <button class="menu-btn">•••</button>
                       <div class="menu-dropdown">
-                        <a href="#" class="edit">Edit</a>
-                        <a href="#" class="delete">Delete</a>
-                        <a href="#" class="barcode">Regenerate Barcode</a>
-                        <a href="#" class="print">Print</a>
+                        <a href="#" class="act-btn">
+                          <img src="icon/Edit.png" class="act-icon"/>
+                          <span class="edit">Edit</span>
+                        </a>
+                        <a href="#" class="act-btn">
+                          <img src="icon/Delete.png" class="act-icon"/>
+                          <span href="#" class="delete">Delete</span>
+                        </a>
+                        <a class="act-btn">
+                          <img src="icon/barcode.png" class="act-icon"/>
+                          <span href="#" class="barcode">Regenerate Barcode</span>
+                        </a>
+                        <a class="act-btn">
+                          <img src="icon/print.png" class="act-icon"/>
+                          <span href="#" class="print">Print</span>
+                        </a>
                       </div>
                     </div>
                   </td>

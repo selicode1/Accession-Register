@@ -44,7 +44,7 @@ export class DonutChartComponent implements AfterViewInit {
             plugins: {
               legend: {
                 display: true,
-                position: 'bottom',
+                position: 'bottom', 
                 labels: {
                   font: {
                     size: 14,
@@ -60,7 +60,7 @@ export class DonutChartComponent implements AfterViewInit {
                 },
               },
             },
-            cutout: '70%'  // Adjust this value to change the thickness
+            cutout: '50%'  // Adjust this value to change the thickness
           },
         });
       } else {

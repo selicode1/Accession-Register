@@ -1,7 +1,20 @@
 <main>
-    <!-- <app-sidebar></app-sidebar> -->
+  <app-sidebar [isVisible]="visibleSidebar === 'Sidebar'"  (close)="hideSidebar()" [title]="'Sidebar'"></app-sidebar>
+    <div class="backdrop" [class.active]="visibleSidebar === 'Sidebar'"></div>
+    <div class="backdrop" [class.active]="visibleSidebar === 'UserProfile'"></div>
     <div class="adduser-container">
-        <h1>Add Users</h1>
+      <div class="head">
+        <div class="heading">
+          <div class="menu-icon" (click)="toggleSidebar('Sidebar')">
+            <img src="icon/menu.png" alt="Menu Icon"  id="menu-icon">
+          </div>
+          <h1>Add Users</h1>
+        </div>
+          <input type="date" id="start-date">
+          <div class="user-profile" (click)="toggleSidebar('UserProfile')">
+            <img src="images/StephCurry.jpg" alt="User Avatar" class="avatar">
+          </div>
+      </div>
 
         
 
@@ -45,117 +58,138 @@
             <input type="search" placeholder="Search" id="search"/>
         </div>
 
+        <div class="records-table-container">
+          <table class="records-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Gender</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-cell="ISBN">
 
-        <div class="table-row">
-            <div class="user-info">
-                <img src="images/StephCurry.jpg" alt="Avatar" class="avatar" />
-              <div class="user-details">
-                <span class="user-name">Robert Bacins</span>
-              </div>
-            </div>
-            <div class="user-email">robertbacins4182om</div>
-            <div class="user-phone">0240345621</div>
-            <div class="user-gender">
-              <span class="gender-badge male">Male</span>
-            </div>
-            <div class="action-menu">
-              <button class="menu-btn">•••</button>
-              <div class="menu-dropdown">
-                <a href="#" class="edit">Edit</a>
-                <a href="#" class="delete">Delete</a>
-              </div>
-            </div>
+                  <div class="user-info">
+                    <img src="images/StephCurry.jpg" alt="Avatar" class="avatar" />
+                    <div class="user-details">
+                      <span class="user-name">Robert Bacins</span>
+                    </div>
+                  </div>
+
+                </td>
+                <td data-cell="Title">
+                  <div class="user-email">robertbacins4182om</div>
+                </td>
+                <td data-cell="Class Number">
+                  <div class="user-phone">0240345621</div>
+                </td>
+                <td data-cell="Copies">
+                  <div class="user-gender">
+                    <span class="gender-badge male">Male</span>
+                  </div>
+                </td>
+                <td data-cell="Action">
+                  <div class="action-menu">
+                    <button class="menu-btn">•••</button>
+                    <div class="menu-dropdown">
+                      <a href="#" class="act-btn">
+                        <img src="icon/Edit.png" class="act-icon"/>
+                        <span class="edit">Edit</span>
+                      </a>
+                      <a href="#" class="act-btn">
+                        <img src="icon/Delete.png" class="act-icon"/>
+                        <span href="#" class="delete">Delete</span>
+                      </a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-cell="ISBN">
+
+                  <div class="user-info">
+                    <img src="images/StephCurry.jpg" alt="Avatar" class="avatar" />
+                    <div class="user-details">
+                      <span class="user-name">Robert Bacins</span>
+                    </div>
+                  </div>
+
+                </td>
+                <td data-cell="Title">
+                  <div class="user-email">robertbacins4182om</div>
+                </td>
+                <td data-cell="Class Number">
+                  <div class="user-phone">0240345621</div>
+                </td>
+                <td data-cell="Copies">
+                  <div class="user-gender">
+                    <span class="gender-badge male">Male</span>
+                  </div>
+                </td>
+                <td data-cell="Action">
+                  <div class="action-menu">
+                    <button class="menu-btn">•••</button>
+                    <div class="menu-dropdown">
+                      <a href="#" class="act-btn">
+                        <img src="icon/Edit.png" class="act-icon"/>
+                        <span class="edit">Edit</span>
+                      </a>
+                      <a href="#" class="act-btn">
+                        <img src="icon/Delete.png" class="act-icon"/>
+                        <span href="#" class="delete">Delete</span>
+                      </a>                  
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-cell="ISBN">
+
+                  <div class="user-info">
+                    <img src="images/StephCurry.jpg" alt="Avatar" class="avatar" />
+                    <div class="user-details">
+                      <span class="user-name">Robert Bacins</span>
+                    </div>
+                  </div>
+    
+                </td>
+                <td data-cell="Title">
+                  <div class="user-email">robertbacins4182om</div>
+                </td>
+                <td data-cell="Class Number">
+                  <div class="user-phone">0240345621</div>
+                </td>
+                <td data-cell="Copies">
+                  <div class="user-gender">
+                    <span class="gender-badge male">Male</span>
+                  </div>
+                </td>
+                <td data-cell="Action">
+                  <div class="action-menu">
+                    <button class="menu-btn">•••</button>
+                    <div class="menu-dropdown">
+                      <a href="#" class="act-btn">
+                        <img src="icon/Edit.png" class="act-icon"/>
+                        <span class="edit">Edit</span>
+                      </a>
+                      <a href="#" class="act-btn">
+                        <img src="icon/Delete.png" class="act-icon"/>
+                        <span href="#" class="delete">Delete</span>
+                      </a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
-
-        <div class="table-row">
-            <div class="user-info">
-                <img src="images/StephCurry.jpg" alt="Avatar" class="avatar" />
-              <div class="user-details">
-                <span class="user-name">Robert Bacins</span>
-              </div>
-            </div>
-            <div class="user-email">robertbacins4182om</div>
-            <div class="user-phone">0240345621</div>
-            <div class="user-gender">
-              <span class="gender-badge male">Male</span>
-            </div>
-            <div class="action-menu">
-              <button class="menu-btn">•••</button>
-              <div class="menu-dropdown">
-                <a href="#" class="edit">Edit</a>
-                <a href="#" class="delete">Delete</a>
-              </div>
-            </div>
-        </div>
-
-
-        <div class="table-row">
-            <div class="user-info">
-                <img src="images/StephCurry.jpg" alt="Avatar" class="avatar" />
-              <div class="user-details">
-                <span class="user-name">Robert Bacins</span>
-              </div>
-            </div>
-            <div class="user-email">robertbacins4182om</div>
-            <div class="user-phone">0240345621</div>
-            <div class="user-gender">
-              <span class="gender-badge male">Male</span>
-            </div>
-            <div class="action-menu">
-              <button class="menu-btn">•••</button>
-              <div class="menu-dropdown">
-                <a href="#" class="edit">Edit</a>
-                <a href="#" class="delete">Delete</a>
-              </div>
-            </div>
-        </div>
-
-
-        <div class="table-row">
-            <div class="user-info">
-                <img src="images/StephCurry.jpg" alt="Avatar" class="avatar" />
-              <div class="user-details">
-                <span class="user-name">Robert Bacins</span>
-              </div>
-            </div>
-            <div class="user-email">robertbacins4182om</div>
-            <div class="user-phone">0240345621</div>
-            <div class="user-gender">
-              <span class="gender-badge male">Male</span>
-            </div>
-            <div class="action-menu">
-              <button class="menu-btn">•••</button>
-              <div class="menu-dropdown">
-                <a href="#" class="edit">Edit</a>
-                <a href="#" class="delete">Delete</a>
-              </div>
-            </div>
-        </div>
-
-
-        <div class="table-row">
-            <div class="user-info">
-              <img src="images/StephCurry.jpg" alt="Avatar" class="avatar" />
-              <div class="user-details">
-                <span class="user-name">Robert Bacins</span>
-              </div>
-            </div>
-            <div class="user-email">robertbacins4182om</div>
-            <div class="user-phone">0240345621</div>
-            <div class="user-gender">
-              <span class="gender-badge male">Male</span>
-            </div>
-            <div class="action-menu">
-              <button class="menu-btn">•••</button>
-              <div class="menu-dropdown">
-                <a href="#" class="edit">Edit</a>
-                <a href="#" class="delete">Delete</a>
-              </div>
-            </div>
-        </div>
           
     </div>
-    <!-- <app-user-profile></app-user-profile> -->
+    <app-user-profile [isVisible]="visibleSidebar === 'UserProfile'"  (close)="hideSidebar()" [title]="'UserProfile'"></app-user-profile>
     <app-add-new-user [isVisible]="visibleSidebar === 'addUser'"  (close)="hideSidebar()" [title]="'Add New User'"></app-add-new-user>
 </main>

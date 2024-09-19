@@ -1,9 +1,10 @@
 
-<div class="sidebar">
+<div class="sidebar" [class.open]="isVisible">
   <div class="sidebar-header">
       <img src="images/GHLA.png" alt="GHLA Logo">
       <h2 class="company-name">Accession Register</h2>
   </div>
+  <span (click)="closeSidebar()" class="close-btn" id="close">&times;</span>
   <ul class="sidebar-menu">
       <li>
         <a class="menu-item"  routerLink="/dashboard" routerLinkActive="active-link">

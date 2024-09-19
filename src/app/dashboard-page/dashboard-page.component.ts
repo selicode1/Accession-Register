@@ -12,5 +12,13 @@ import { StatCardComponent } from '../stat-card/stat-card.component';
   styleUrls: ['./dashboard-page.component.scss']
 })
 export class DashboardPageComponent {
+  visibleSidebar: string | null = null;
 
+  toggleSidebar(sidebarType: string) {
+    this.visibleSidebar = this.visibleSidebar === sidebarType ? null : sidebarType;
+  }
+
+  hideSidebar() {
+    this.visibleSidebar = null;
+  }
 }

@@ -1,4 +1,5 @@
-<div class="profile-card">
+<div class="profile-card" [class.open]="isVisible">
+  <span (click)="closeSidebar()" class="close-btn" id="close">&times;</span>
     <!-- User Information Section -->
     <div class="user-info">
       <img src="images/StephCurry.jpg" alt="User Avatar" class="avatar">

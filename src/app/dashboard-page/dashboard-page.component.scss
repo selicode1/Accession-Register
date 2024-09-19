@@ -7,9 +7,15 @@ main {
   width: 100%;
   padding-inline: 2rem;
   background-color: #fafafb;
-  h1 {
-    padding: 10px;
-  }
+}
+
+.menu-icon {
+  display: none;
+}
+
+#menu-icon{
+  width: 30px;
+  height: 30px;
 }
 
 
@@ -29,9 +35,21 @@ app-donut-chart{
 }
 
 
+
+
 .records-table-container {
   width: 100%;
   margin-bottom: 5%;
+}
+
+.head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  h1 {
+    margin-block: 25px;
+  }
 }
 
 .header {
@@ -114,47 +132,36 @@ app-donut-chart{
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   z-index: 1;
-  padding: 15px 10px;
+  padding: 10px 10px;
   border-radius: 4px;
   // overflow: hidden;
 }
 
 .menu-dropdown a {
   display: block;
-  padding: 8px 5rem 8px 10px;
+  padding: 10px 5rem 8px 10px;
+  margin-block: 10px;
   text-decoration: none;
+  gap: 1rem;
   font-size: 14px;
-}
-
-.menu-dropdown a:hover {
-  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .menu-dropdown .delete {
   color: red;
-  background-color: #fef3f5;
-  border-radius: 5px;
-  margin-top: 10px;
 }
 .menu-dropdown .barcode {
   color: #033600;
-  background-color: #0336002a;
-  border-radius: 5px;
-  margin-top: 10px;
 }
 
 .menu-dropdown .print {
   color: #000000;
-  background-color: #0000003a;
-  border-radius: 5px;
-  margin-top: 10px;
 }
 
 .menu-dropdown .edit {
   color: #5B93FF;
-  background-color: #f7f9ff;
-  border-radius: 5px;
-  margin-top: 10px;
 }
 
 .action-menu:hover .menu-dropdown {
@@ -166,6 +173,10 @@ app-donut-chart{
     width: 100%;
   }
   
+  .menu-icon{
+    display: flex;
+  }
+
   .analytics {
     flex-direction: column; /* Stacks items on smaller screens */
     gap: 1rem; /* Adjust the gap for a more compact layout */
@@ -183,33 +194,59 @@ app-donut-chart{
     height: auto;
   }
 
-  .records-table thead {
-    display: none;
+  .records-table-container{
+    overflow-x: auto;
   }
 
+  /* Backdrop for blurring the dashboard when the sidebar is open */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Transparent dark layer */
+  backdrop-filter: blur(8px);            /* Apply the blur effect */
+  z-index: 998;                          /* Below the sidebar */
+  visibility: hidden;                    /* Hidden by default */
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
 
-  .records-table td {
-    display: block;
-    width: 100%;
-  }
+/* Show the backdrop when the sidebar is open */
+.backdrop.active {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
 
-  .records-table tr {
-    margin-bottom: 1rem;
-    border-bottom: 1px solid black;
+  // .records-table thead {
+  //   display: none;
+  // }
 
-  }
 
-  .records-table tbody tr td {
-    text-align: right;
-    position: relative;
-  }
+  // .records-table td {
+  //   display: block;
+  //   width: 100%;
+  // }
 
-  .records-table td::before{
-    content: attr(data-cell);
-    font-weight: bold;
-    color: #6c6c6c;
-    position: absolute;
-    left: 0;
-  }
+  // .records-table tr {
+  //   margin-bottom: 1rem;
+  //   border-bottom: 1px solid black;
+
+  // }
+
+  // .records-table tbody tr td {
+  //   text-align: right;
+  //   position: relative;
+  // }
+
+  // .records-table td::before{
+  //   content: attr(data-cell);
+  //   font-weight: bold;
+  //   color: #6c6c6c;
+  //   position: absolute;
+  //   left: 0;
+  // }
   
 }
