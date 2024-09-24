@@ -1,14 +1,12 @@
 .sidebar {
-  position: sticky;       /* Makes the sidebar static (fixed to the viewport) */
-  top: 0;                /* Stick to the top of the page */
+  position: sticky;
+  top: 0;    
   left: 0;
   width: 30vh;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  z-index: 1000;         /* Ensures the sidebar stays on top of other elements */
-  // border-right: 1px solid #033600;
-  // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;  
 }
 
 .sidebar-header {
@@ -90,7 +88,6 @@
   background: linear-gradient(90deg, #0336002c, #03360000, #03360000, #03360000, #03360000)
 }
 
-/* Menu icon hidden by default */
 .menu-icon {
   display: none;
 }
@@ -101,22 +98,21 @@
 }
 
 
-/* Show menu icon and hide sidebar on smaller screens */
 @media (max-width: 768px) {
 
   .sidebar {
-    position: fixed;       /* Makes the sidebar static (fixed to the viewport) */
-    top: 0;                /* Stick to the top of the page */
-    left: -30vh; /* Initially hidden off-screen */
-    width: 30vh;
+    position: fixed;
+    top: 0;
+    left: -40vh;
+    width: 40vh;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding-top: 4rem;
-    transition: left 0.3s ease; /* Animation */
+    transition: left 0.3s ease;
     background-color: #fff;
   }
 
   .sidebar.open {
-    left: 0; /* Show sidebar when open */
+    left: 0;
   }
 
   .close-btn {

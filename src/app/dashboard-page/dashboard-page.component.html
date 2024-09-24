@@ -51,7 +51,7 @@
               <div class="action-menu">
                 <button class="menu-btn">•••</button>
                 <div class="menu-dropdown">
-                  <a href="#" class="act-btn">
+                  <a class="act-btn" (click)="toggleSidebar('editRecord')">
                     <img src="icon/Edit.png" class="act-icon"/>
                     <span class="edit">Edit</span>
                   </a>
@@ -82,7 +82,7 @@
               <div class="action-menu">
                 <button class="menu-btn">•••</button>
                 <div class="menu-dropdown">
-                  <a href="#" class="act-btn">
+                  <a class="act-btn" (click)="toggleSidebar('editRecord')">
                     <img src="icon/Edit.png" class="act-icon"/>
                     <span class="edit">Edit</span>
                   </a>
@@ -113,7 +113,7 @@
               <div class="action-menu">
                 <button class="menu-btn">•••</button>
                 <div class="menu-dropdown">
-                  <a href="#" class="act-btn">
+                  <a class="act-btn" (click)="toggleSidebar('editRecord')">
                     <img src="icon/Edit.png" class="act-icon"/>
                     <span class="edit">Edit</span>
                   </a>
@@ -136,6 +136,7 @@
         </tbody>
       </table>
     </div>
+    <app-edit-record [isVisible]="visibleSidebar === 'editRecord'"  (close)="hideSidebar()" [title]="'Edit Record'"></app-edit-record>
     
     
   </main>

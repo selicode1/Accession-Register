@@ -9,7 +9,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class FilterReportComponent {
   @Input() isVisible = false;
-  @Input() title: string = 'Filter Report'; // Title for the sidebar
+  @Input() title: string = 'Filter Report';
   @Output() close = new EventEmitter<void>();
 
   closeSidebar() {

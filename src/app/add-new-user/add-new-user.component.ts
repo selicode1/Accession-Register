@@ -9,7 +9,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class AddNewUserComponent {
   @Input() isVisible = false;
-  @Input() title: string = 'Add a New Record'; // Title for the sidebar
+  @Input() title: string = 'Add a New Record';
   @Output() close = new EventEmitter<void>();
 
   closeSidebar() {

@@ -1,19 +1,15 @@
-/* General styles */  
   .profile-card {
-    position: sticky;       /* Makes the sidebar static (fixed to the viewport) */
-    top: 0;                /* Stick to the top of the page */
-    right: 0;/* Ensures the sidebar stays on the right */
+    position: sticky;
+    top: 0;     
+    right: 0;
     width: 40vh;
     height: 100vh;
     display: flex;
     flex-direction: column;
     text-align: center;
-    z-index: 1000;  
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    // padding: 20px;       /* Ensures the sidebar stays on top of other elements */
+    z-index: 997;  
   }
   
-  /* User information styles */
   .user-info {
     margin-top: 10px;
     margin-bottom: 20px;
@@ -36,8 +32,7 @@
     font-size: 14px;
     color: #888;
   }
-  
-  /* Contact information styles */
+
   .contact-info {
     text-align: left;
     margin-inline: 30px;
@@ -67,7 +62,6 @@
     margin-right: 10px;
   }
   
-  /* Records section */
   .records {
     margin-top: 10px;
   }
@@ -81,7 +75,6 @@
     margin: 0 auto;
   }
   
-  /* Donut charts section */
   .donut-charts {
     display: flex;
     align-items: center;
@@ -108,18 +101,19 @@
 
   @media (max-width: 768px) {
     .profile-card {
-      position: fixed;       /* Makes the sidebar static (fixed to the viewport) */
-      top: 0;                /* Stick to the top of the page */
-      right: -40vh; /* Initially hidden off-screen */
-      width: 40vh;
+      position: fixed;
+      top: 0; 
+      right: -100vw; 
+      width: 100vw;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       padding-top: 4rem;
-      transition: right 0.3s ease; /* Animation */
+      transition: right 0.3s ease; 
       background-color: #fff;
+      overflow: auto;
     }
   
     .profile-card.open {
-      right: 0; /* Show sidebar when open */
+      right: 0; 
     }
 
     .close-btn {

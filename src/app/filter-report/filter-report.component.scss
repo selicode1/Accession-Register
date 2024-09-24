@@ -1,18 +1,18 @@
 .container {
-    position: fixed;       /* Makes the sidebar static (fixed to the viewport) */
-    top: 0;                /* Stick to the top of the page */
-    right: -35vw; /* Initially hidden off-screen */
+    position: fixed;
+    top: 0;    
+    right: -35vw; 
     width: 25vw;
     height: 100vh;
     z-index: 999;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding-top: 4rem;
-    transition: right 0.3s ease; /* Animation */
+    transition: right 0.3s ease;
     background-color: #fff;
   }
 
   .container.show {
-    right: 0; /* Slide in */
+    right: 0;
   }
 
   h3 {
@@ -43,7 +43,7 @@
     cursor: pointer;
     font-size: 16px;
     margin-bottom: 30px;
-    margin-top: 10rem;
+    margin-top: 5rem;
   }
   
   button:hover {
@@ -86,17 +86,17 @@
   }
 
   input[type="checkbox"] {
-    width: 20px;  /* Set custom width */
-    height: 20px; /* Set custom height */
-    appearance: none; /* Remove default checkbox style */
+    width: 20px;
+    height: 20px;
+    appearance: none;
     background-color: white;
     border: 1px solid #B3B3BF;
-    border-radius: 5px; /* Optional: for rounded corners */
+    border-radius: 5px;
     cursor: pointer;
   }
   
   input[type="checkbox"]:checked {
-    background-color: #033600; /* Green background when checked */
+    background-color: #033600; 
     content: "✔";
     display: flex;
     justify-content: center;
@@ -104,9 +104,9 @@
   }
   
   input[type="checkbox"]:checked::before {
-    content: "✔"; /* Display checkmark */
+    content: "✔";
     color: white;
-    font-size: 18px; /* Adjust checkmark size */
+    font-size: 18px;
   }
   
   /* Label styling */
@@ -125,11 +125,12 @@
 
 @media screen and (max-width: 768px) {
     .container {
-        width: 100vw; /* Full screen width on smaller devices */
-        right: -100vw; /* Initially hidden completely off-screen */
+        width: 100vw; 
+        right: -100vw;
+        overflow: auto;
     }
     .container.show {
-        right: 0; /* Fully visible when the button is clicked */
+        right: 0; 
     }
     
 }

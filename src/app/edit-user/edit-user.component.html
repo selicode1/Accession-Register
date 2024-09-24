@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container" [class.show]="isVisible">
     <h2>Edit User</h2>
-    <span class="close-btn">&times;</span>
+    <span class="close-btn" (click)="closeSidebar()">&times;</span>
   
     <div class="profile-image">
       <i class="fas fa-camera"></i>
@@ -40,7 +40,6 @@
               <option value="other">Other</option>
             </select>
         </div>
+        <button>Edit User</button>
     </form>
-  
-    <button>Edit User</button>
   </div>

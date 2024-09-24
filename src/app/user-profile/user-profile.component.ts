@@ -12,7 +12,7 @@ import { SingleDonutChart2Component } from "../single-donut-chart2/single-donut-
 })
 export class UserProfileComponent {
   @Input() isVisible = false;
-  @Input() title: string = 'UserProfile'; // Title for the sidebar
+  @Input() title: string = 'UserProfile';
   @Output() close = new EventEmitter<void>();
 
   closeSidebar() {

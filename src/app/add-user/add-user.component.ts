@@ -3,11 +3,18 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
 import { StatCardComponent } from '../stat-card/stat-card.component';
 import { UserProfileComponent } from '../user-profile/user-profile.component';
 import { AddNewUserComponent } from '../add-new-user/add-new-user.component';
+import { EditUserComponent } from '../edit-user/edit-user.component';
 
 @Component({
   selector: 'app-add-user',
   standalone: true,
-  imports: [SidebarComponent, StatCardComponent, UserProfileComponent, AddNewUserComponent],
+  imports: [
+    SidebarComponent, 
+    StatCardComponent, 
+    UserProfileComponent, 
+    AddNewUserComponent,
+    EditUserComponent
+  ],
   templateUrl: './add-user.component.html',
   styleUrl: './add-user.component.scss'
 })

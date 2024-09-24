@@ -1,7 +1,6 @@
 <main>
   <app-sidebar [isVisible]="visibleSidebar === 'Sidebar'"  (close)="hideSidebar()" [title]="'Sidebar'"></app-sidebar>
     <div class="backdrop" [class.active]="visibleSidebar === 'Sidebar'"></div>
-    <div class="backdrop" [class.active]="visibleSidebar === 'UserProfile'"></div>
     <div class="adduser-container">
       <div class="head">
         <div class="heading">
@@ -96,7 +95,7 @@
                   <div class="action-menu">
                     <button class="menu-btn">•••</button>
                     <div class="menu-dropdown">
-                      <a href="#" class="act-btn">
+                      <a class="act-btn" (click)="toggleSidebar('editUser')">
                         <img src="icon/Edit.png" class="act-icon"/>
                         <span class="edit">Edit</span>
                       </a>
@@ -134,7 +133,7 @@
                   <div class="action-menu">
                     <button class="menu-btn">•••</button>
                     <div class="menu-dropdown">
-                      <a href="#" class="act-btn">
+                      <a class="act-btn" (click)="toggleSidebar('editUser')">
                         <img src="icon/Edit.png" class="act-icon"/>
                         <span class="edit">Edit</span>
                       </a>
@@ -172,7 +171,7 @@
                   <div class="action-menu">
                     <button class="menu-btn">•••</button>
                     <div class="menu-dropdown">
-                      <a href="#" class="act-btn">
+                      <a class="act-btn" (click)="toggleSidebar('editUser')">
                         <img src="icon/Edit.png" class="act-icon"/>
                         <span class="edit">Edit</span>
                       </a>
@@ -192,4 +191,5 @@
     </div>
     <app-user-profile [isVisible]="visibleSidebar === 'UserProfile'"  (close)="hideSidebar()" [title]="'UserProfile'"></app-user-profile>
     <app-add-new-user [isVisible]="visibleSidebar === 'addUser'"  (close)="hideSidebar()" [title]="'Add New User'"></app-add-new-user>
+    <app-edit-user [isVisible]="visibleSidebar === 'editUser'"  (close)="hideSidebar()" [title]="'Edit User'"></app-edit-user>
 </main>

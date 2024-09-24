@@ -12,12 +12,10 @@ export class LineChartComponent implements AfterViewInit  {
   public chart: any;
 
   constructor() {
-    // Register the Chart.js components
     Chart.register(...registerables);
   }
 
   ngAfterViewInit(): void {
-    // Initialize the chart after the view is initialized
     this.createLineChart();
   }
   
@@ -29,13 +27,12 @@ export class LineChartComponent implements AfterViewInit  {
     if (canvas) {
       const ctx = canvas.getContext('2d');
       if (ctx) {
-        // Create gradients for a modern look
         const gradientFiction = ctx.createLinearGradient(0, 0, 0, 400);
-        gradientFiction.addColorStop(0, 'rgba(255, 99, 132, 0.2)'); // 50% transparency
+        gradientFiction.addColorStop(0, 'rgba(255, 99, 132, 0.2)');
         gradientFiction.addColorStop(1, 'rgba(255, 99, 132, 0)');
   
         const gradientNonFiction = ctx.createLinearGradient(0, 0, 0, 400);
-        gradientNonFiction.addColorStop(0, 'rgba(54, 162, 235, 0.2)'); // 50% transparency
+        gradientNonFiction.addColorStop(0, 'rgba(54, 162, 235, 0.2)');
         gradientNonFiction.addColorStop(1, 'rgba(54, 162, 235, 0)');
   
         this.chart = new Chart(ctx, {
@@ -48,26 +45,26 @@ export class LineChartComponent implements AfterViewInit  {
                 data: [50, 60, 70, 65, 55, 70, 60, 85, 70, 90, 75, 95],
                 borderColor: 'rgba(255, 99, 132, 1)',
                 backgroundColor: gradientFiction,
-                borderWidth: 5,  // Thicker line
+                borderWidth: 5,
                 fill: true,
                 pointBorderColor: 'rgba(255, 99, 132, 1)',
                 pointBackgroundColor: '#fff',
                 pointBorderWidth: 3,
                 pointRadius: 7,
-                tension: 0.4,  // Curved line
+                tension: 0.4,
               },
               {
                 label: 'Non-Fiction',
                 data: [40, 50, 55, 60, 45, 80, 65, 70, 75, 80, 85, 90],
                 borderColor: 'rgba(54, 162, 235, 1)',
                 backgroundColor: gradientNonFiction,
-                borderWidth: 5,  // Thicker line
+                borderWidth: 5,
                 fill: true,
                 pointBorderColor: 'rgba(54, 162, 235, 1)',
                 pointBackgroundColor: '#fff',
                 pointBorderWidth: 3,
                 pointRadius: 7,
-                tension: 0.4,  // Curved line
+                tension: 0.4,
               },
             ],
           },
@@ -75,7 +72,7 @@ export class LineChartComponent implements AfterViewInit  {
             responsive: true,
             plugins: {
               legend: {
-                display: false, // Disables the legend
+                display: false,
                 position: 'top',
                 labels: {
                   font: {

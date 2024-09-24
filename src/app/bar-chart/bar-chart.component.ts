@@ -12,12 +12,10 @@ export class BarChartComponent implements AfterViewInit {
   public chart: any;
 
   constructor() {
-    // Register the Chart.js components
     Chart.register(...registerables);
   }
 
   ngAfterViewInit(): void {
-    // Initialize the chart after the view is initialized
     this.createLineChart();
   }
   
@@ -29,13 +27,12 @@ export class BarChartComponent implements AfterViewInit {
     if (canvas) {
       const ctx = canvas.getContext('2d');
       if (ctx) {
-        // Create gradients for a modern look
         const gradientFiction = ctx.createLinearGradient(0, 0, 0, 400);
-        gradientFiction.addColorStop(0, 'rgba(255, 99, 132, 0.2)'); // 50% transparency
+        gradientFiction.addColorStop(0, 'rgba(255, 99, 132, 0.2)');
         gradientFiction.addColorStop(1, 'rgba(255, 99, 132, 0)');
   
         const gradientNonFiction = ctx.createLinearGradient(0, 0, 0, 400);
-        gradientNonFiction.addColorStop(0, 'rgba(54, 162, 235, 0.2)'); // 50% transparency
+        gradientNonFiction.addColorStop(0, 'rgba(54, 162, 235, 0.2)');
         gradientNonFiction.addColorStop(1, 'rgba(54, 162, 235, 0)');
   
         this.chart = new Chart(ctx, {
@@ -63,7 +60,7 @@ export class BarChartComponent implements AfterViewInit {
             responsive: true,
             plugins: {
               legend: {
-                display: false, // Disables the legend
+                display: false,
                 position: 'top',
                 labels: {
                   font: {

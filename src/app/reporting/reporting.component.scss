@@ -1,6 +1,7 @@
 main {
     display: flex;
 }
+
 .menu-icon {
   display: none;
 }
@@ -14,12 +15,14 @@ main {
     display: flex;
     justify-content: space-between;
 }
+
 .heading {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 10px;
 }
+
 input[type="date"] {
     padding: 15px;
     margin-block: 25px;
@@ -28,7 +31,7 @@ input[type="date"] {
     box-sizing: border-box;
     background-color: #f7f7f8;
     border-width: 0;
-  }
+}
 
 .reporting-container {
     padding-inline: 2rem;
@@ -39,7 +42,6 @@ input[type="date"] {
     width: 100%;
 }
 
-/* Card styling */
 .cards {
     width: 100%;
     display: flex;
@@ -52,7 +54,6 @@ input[type="date"] {
     background-color: white;
     border-radius: 15px;
     padding: 20px;
-    // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
 
@@ -72,7 +73,6 @@ input[type="date"] {
     width: 100%;
     background-color: white;
     border-radius: 15px;
-    // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -86,6 +86,7 @@ input[type="date"] {
     width: 25px;
     height: 25px;
   }
+  
   .print-record {
     display: flex;
     gap: 1rem;
@@ -101,7 +102,6 @@ input[type="date"] {
     cursor: pointer;
   }
   
-  /* Icon container */
   .icon-container {
     border-radius: 100%;
     padding: 30px;
@@ -110,29 +110,26 @@ input[type="date"] {
     align-items: center;
   }
   
-  /* Heart icon */
   .icon {
     width: 40px;
     height: auto;
   }
   
-  /* Text content */
   .text-content {
     margin-left: 15px;
   }
   
-  /* Number styling */
   .number {
     margin: 0;
     font-size: 35px;
-    color: #4a4a4a;  /* Dark grey */
+    color: #4a4a4a;
     font-weight: 500;
   }
   
-  /* Label styling */
+
   .label {
     margin: 0;
-    color: #7a7a7a;  /* Light grey */
+    color: #7a7a7a;
     font-size: 15px;
     font-weight: 500;
   }
@@ -140,7 +137,6 @@ input[type="date"] {
 .records-table-container {
     width: 100%;
     margin-bottom: 5%;
-    // overflow-x: auto;
   }
   
   .header {
@@ -164,7 +160,6 @@ input[type="date"] {
 .records-table {
     width: 100%;
     border-collapse: collapse;
-    // box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
   
   .records-table th,
@@ -189,10 +184,6 @@ input[type="date"] {
   .records-table tbody tr:hover {
     background-color: #f9f9f9;
   }
-  
-//   .records-table .highlight {
-//     background-color: #eef6ed;
-//   }
   
   .records-table input[type="checkbox"] {
     cursor: pointer;
@@ -234,6 +225,7 @@ input[type="date"] {
     display: flex;
     flex-direction: row;
     align-items: center;
+    cursor: pointer;
   }
   
   .menu-dropdown .delete {
@@ -290,56 +282,26 @@ input[type="date"] {
       }
 
 
-              /* Backdrop for blurring the dashboard when the sidebar is open */
       .backdrop {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.2); /* Transparent dark layer */
-        backdrop-filter: blur(8px);            /* Apply the blur effect */
-        z-index: 998;                          /* Below the sidebar */
-        visibility: hidden;                    /* Hidden by default */
+        background-color: rgba(0, 0, 0, 0.2); 
+        backdrop-filter: blur(8px); 
+        z-index: 998;
+        visibility: hidden;
         opacity: 0;
         transition: opacity 0.3s ease, visibility 0s 0.3s;
       }
 
-      /* Show the backdrop when the sidebar is open */
+
       .backdrop.active {
         visibility: visible;
         opacity: 1;
         transition: opacity 0.3s ease;
       }
-
-      // .records-table thead {
-      //   display: none;
-      // }
-    
-    
-      // .records-table td {
-      //   display: block;
-      //   width: 100%;
-      // }
-    
-      // .records-table tr {
-      //   margin-bottom: 1rem;
-      //   border-bottom: 1px solid black;
-    
-      // }
-    
-      // .records-table tbody tr td {
-      //   text-align: right;
-      //   position: relative;
-      // }
-    
-      // .records-table td::before{
-      //   content: attr(data-cell);
-      //   font-weight: bold;
-      //   color: #6c6c6c;
-      //   position: absolute;
-      //   left: 0;
-      // }
 
     .header{
         display: flex;

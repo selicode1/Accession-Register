@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router';
 })
 export class SidebarComponent {
   @Input() isVisible = false;
-  @Input() title: string = 'Sidebar'; // Title for the sidebar
+  @Input() title: string = 'Sidebar';
   @Output() close = new EventEmitter<void>();
 
   closeSidebar() {

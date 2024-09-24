@@ -1,4 +1,3 @@
-/* Container for the login form */
 .login-container {
     width: 100%;
     padding: 40px;
@@ -20,12 +19,7 @@
     width: 50px;
     height: auto;
   }
-
-  form{
-    margin-top: 30px;
-  }
   
-  /* Heading */
   h2 {
     font-size: 24px;
     margin-bottom: 20px;
@@ -38,18 +32,15 @@
   .login-form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin-block: 9%;
+    margin-block: 6rem
   }
   
-  /* Form group styling */
   .form-group {
     margin-bottom: 20px;
     text-align: left;
   }
   
-  /* Label styling */
   label {
     display: block;
     font-size: 14px;
@@ -57,7 +48,6 @@
     font-weight: 500;
   }
   
-  /* Input field styling */
   input[type="email"],
   input[type="password"] {
     width: 100%;
@@ -68,7 +58,6 @@
     box-sizing: border-box;
   }
   
-  /* Checkbox group styling */
   .checkbox-group {
     display: flex;
     justify-content: flex-start;
@@ -76,11 +65,6 @@
     gap: 5px;
   }
 
-//   .checkbox-group input[type="checkbox"] {
-//     margin-right: 10px;
-//   }
-  
-  /* Button styling */
   .btn {
     width: 100%;
     padding: 10px;
@@ -100,7 +84,6 @@
     background-color: #032701;
   }
   
-  /* Terms text styling */
   .terms {
     font-size: 13px;
     margin-top: 20px;
@@ -116,18 +99,17 @@
     text-decoration: underline;
   }
   
-  /* Footer */
   footer {
     position: absolute;
     bottom: 0;
     left: 0;
     padding: 40px;
-    text-align: left; /* Align text to the left */
+    text-align: left; 
   }
   
   footer p {
-    font-size: 0.875em; /* Adjust as needed */
-    color: #555; /* Text color */
+    font-size: 0.875em; 
+    color: #555;
   }
   
 

@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container" [class.show]="isVisible">
     <h3>Edit Record</h3>
-    <span class="close-btn">&times;</span>
+    <span class="close-btn" (click)="closeSidebar()">&times;</span>
 
     <form>
         <div class="form-group">
@@ -27,7 +27,6 @@
             <label for="quanity">Add Records</label>
             <input type="number" id="quanity" placeholder="12" required>
         </div>
+        <button>Update Record</button>
     </form>
-  
-    <button>Update Record</button>
   </div>

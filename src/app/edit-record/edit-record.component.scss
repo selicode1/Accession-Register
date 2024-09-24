@@ -1,14 +1,18 @@
 .container {
-    position: sticky;       /* Makes the sidebar static (fixed to the viewport) */
-    top: 0;                /* Stick to the top of the page */
-    margin-left: auto; /* Ensures the sidebar stays on the right */
-    width: 25vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    z-index: 1000;  
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding-block: 30px;
+  position: fixed;
+  top: 0;
+  right: -25vw; 
+  width: 25vw;
+  height: 100vh;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding-block: 25px;
+  transition: right 0.3s ease;
+  background-color: #fff;
+  }
+  
+  .container.show {
+    right: 0;
   }
   
   .profile-image {
@@ -46,8 +50,6 @@
   }
   
   button {
-    position: absolute;
-    bottom: 20px;
     background-color: #033600;
     color: #fff;
     padding: 15px 6.3rem;
@@ -55,8 +57,7 @@
     border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
-    margin-top: 30px;
-    margin-inline: 30px;
+    margin-top: 2rem;
   }
   
   button:hover {
@@ -81,6 +82,8 @@
 
   form {
     padding-inline: 30px;
+    display: flex;
+    flex-direction: column;
   }
 
   .form-group {
@@ -88,7 +91,6 @@
     text-align: left;
   }
   
-  /* Label styling */
   label {
     display: block;
     margin-bottom: 5px;
@@ -96,3 +98,13 @@
     color: #333;
     font-weight: 500;
   }
+
+  @media screen and (max-width: 768px) {
+    .container {
+        width: 100vw;
+        right: -100vw;
+    }
+    .container.show {
+        right: 0;
+    }
+}

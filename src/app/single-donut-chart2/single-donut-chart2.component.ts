@@ -12,12 +12,10 @@ export class SingleDonutChart2Component implements AfterViewInit {
   public chart: any;
 
   constructor() {
-    // Register the Chart.js components
     Chart.register(...registerables);
   }
 
   ngAfterViewInit(): void {
-    // Initialize the chart after the view is initialized
     this.createDonutCharts();
   }
   
@@ -35,7 +33,7 @@ export class SingleDonutChart2Component implements AfterViewInit {
             datasets: [
               {
                 label: 'Fiction',
-                data: [60, 40], // 70% Fiction, 30% Other
+                data: [60, 40],
                 backgroundColor: ['rgba(54, 162, 235, 1)', 'rgba(200, 200, 200, 0.2)'],
                 borderColor: 'rgba(54, 162, 235, 1)',
                 borderWidth: 1,
@@ -46,7 +44,7 @@ export class SingleDonutChart2Component implements AfterViewInit {
             responsive: true,
             plugins: {
               legend: {
-                display: false, // Disables the legend
+                display: false,
                 position: 'top',
                 labels: {
                   font: {
@@ -63,7 +61,7 @@ export class SingleDonutChart2Component implements AfterViewInit {
                 },
               },
             },
-            cutout: '70%'  // Adjust this value to change the thickness
+            cutout: '70%'
           },
         });
       } else {

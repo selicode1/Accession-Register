@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-edit-record',
@@ -8,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './edit-record.component.scss'
 })
 export class EditRecordComponent {
+  @Input() isVisible = false;
+  @Input() title: string = 'editUser';
+  @Output() close = new EventEmitter<void>();
 
+  closeSidebar() {
+    this.close.emit();
+  }
 }
